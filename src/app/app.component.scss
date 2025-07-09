@@ -1,13 +1,1 @@
-.page-container {
-    background-color: rgb(134, 190, 239);
-
-    .span{
-        background: #fffff0;
-        border:1px solid #a8e46d;
-        border-radius: 5px;
-        padding: 2px 6px;
-        font-weight: bold;
-
-            }
-            }
-
+@use '../styles.scss' as *;

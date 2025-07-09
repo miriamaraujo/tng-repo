@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+
+.page-container {
+    background-color: #fcfcf7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    span {
+        background: #fffff0;
+        border: 2px solid #a8e46d;
+        border-radius: 5px;
+        padding: 2px 6px;
+        font-weight: 600;
+        color: #333;
+        font-size: 1.2em;
+    }
+}
