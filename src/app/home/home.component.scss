@@ -1,0 +1,282 @@
+.plantfy-home {
+    // max-width: 100%;
+    // margin: 0 auto;
+    // padding: 0;
+    // background: #fff;
+    // border-radius: 24px;
+    // box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+    // .plantfy-header {
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: space-between;
+    //     padding: 1.2rem 1.5rem 1.2rem 1rem;
+    //     background: #fff;
+    //     border-radius: 24px 24px 0 0;
+    //     .avatar {
+    //         width: 44px;
+    //         height: 44px;
+    //         border-radius: 50%;
+    //         object-fit: cover;
+    //         border: 2px solid #e0f7d9;
+    //     }
+    //     .brand {
+    //         font-size: 1.6rem;
+    //         font-weight: 700;
+    //         color: #6dcf7c;
+    //         letter-spacing: 1px;
+    //     }
+    //     .menu-btn {
+    //         background: none;
+    //         border: none;
+    //         cursor: pointer;
+    //         padding: 0;
+    //         margin-left: 1rem;
+    //     }
+    // }
+    .plantfy-grid {
+        display: flex;
+        gap: 2rem;
+        margin: 1.2rem 1.5rem 0.5rem 1.5rem;
+        .my-plants,
+        .watering-calendar {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+    }
+    @media (max-width: 768px) {
+        .plantfy-grid {
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+    }
+    .stories {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        padding: 1rem 1.5rem 0.5rem 1.5rem;
+        overflow-x: auto;
+        .story {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #eee;
+            border: 2px solid #e0f7d9;
+            flex: 0 0 auto;
+            position: relative;
+            &.add-story {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #fff;
+                border: 2px dashed #a8e46d;
+                color: #a8e46d;
+                cursor: pointer;
+                span {
+                    background: none;
+                    padding: none;
+                    margin: auto;
+                    border: none;
+                }
+            }
+        }
+    }
+    .pro-tip {
+        margin: 1.2rem 1.5rem 0.5rem 1.5rem;
+        text-align: center;
+        .tip-title {
+            font-weight: 700;
+            color: #444;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+        .tip-text {
+            color: #888;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+        .tip-divider {
+            margin: 0.5rem auto 0 auto;
+            width: 24px;
+        }
+    }
+    .my-plants {
+        margin: 1.2rem 1.5rem 0.5rem 1.5rem;
+        .section-title {
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 0.7rem;
+            font-size: 1.1rem;
+        }
+        .plants-list {
+            display: flex;
+            align-items: flex-end;
+            gap: 1.2rem;
+            .plant-card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background: #f9fbe7;
+                border-radius: 18px;
+                padding: 0.7rem 0.8rem 0.5rem 0.8rem;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+                height: 100%;
+                img {
+                    min-width: 60px;
+                    max-width: 100%;
+                    min-height: 60px;
+                    object-fit: contain;
+                    margin-bottom: 0.3rem;
+                }
+                span {
+                    font-weight: 600;
+                    color: #444;
+                    font-size: 1rem;
+                }
+            }
+            .add-plant {
+                background: #6dcf7c;
+                border: none;
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 0.5rem;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+                cursor: pointer;
+            }
+        }
+    }
+    .watering-calendar {
+        margin: 1.2rem 1.5rem 0.5rem 1.5rem;
+        .section-title {
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 0.7rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            .calendar-add {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 0;
+                margin-left: 0.5rem;
+            }
+        }
+        .calendar-box {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+            padding: 1rem;
+            .calendar-header {
+                text-align: center;
+                font-weight: 600;
+                color: #6dcf7c;
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
+            }
+            .calendar-table {
+                width: 100%;
+                th,
+                td {
+                    text-align: center;
+                    padding: 0.95rem 0rem;
+                    font-size: 0.95rem;
+                    border: 4px solid #fff;
+                    border-radius: 10px;
+                }
+                th {
+                    color: #bbb;
+                    font-weight: 600;
+                }
+                td.active {
+                    background: #a8e46d;
+                    color: #fff;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+    .journal {
+        margin: 1.2rem 1.5rem 1.5rem 1.5rem;
+        .section-title {
+            font-weight: 700;
+            color: #444;
+            margin-bottom: 0.7rem;
+            font-size: 1.1rem;
+        }
+        .journal-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .journal-entry {
+                display: flex;
+                background: #fff;
+                border: 1px solid #e0e0e0;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+                img {
+                    width: 70px;
+                    height: 70px;
+                    object-fit: cover;
+                }
+                .entry-content {
+                    flex: 1;
+                    padding: 0.7rem 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .entry-title {
+                        font-weight: 600;
+                        color: #444;
+                        margin-bottom: 0.2rem;
+                    }
+                    .entry-desc {
+                        color: #888;
+                        font-size: 0.95rem;
+                        margin-bottom: 0.3rem;
+                        line-height: 1.3;
+                    }
+                    .entry-date {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.3rem;
+                        color: #6dcf7c;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+    .plantfy-home {
+        max-width: 100vw;
+        border-radius: 0;
+        box-shadow: none;
+        .plantfy-header {
+            border-radius: 0;
+            padding: 1rem 1rem 1rem 0.7rem;
+        }
+        .stories,
+        .pro-tip,
+        .my-plants,
+        .watering-calendar,
+        .journal {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        .journal .journal-list .journal-entry img {
+            width: 56px;
+            height: 56px;
+        }
+    }
+}
