@@ -1,0 +1,24 @@
+<header class="mobile-header">
+    <button class="menu-toggle" (click)="toggleMenu()">
+    {{ menuOpen ? '✖' : '☰' }}
+  </button>
+    <span class="page-title">tng</span>
+</header>
+<nav class="mobile-nav" [class.open]="menuOpen">
+    <ul>
+        <li>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="closeMenu()">
+                <!-- Home SVG icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9h-3v9h-12v-9h-3z"/></svg>
+                <span>Home</span>
+            </a>
+        </li>
+        <li>
+            <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">
+                <!-- About SVG icon -->
+                <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><rect x="8" y="14" width="8" height="6"/></svg>
+                <span>About Us</span>
+            </a>
+        </li>
+    </ul>
+</nav>

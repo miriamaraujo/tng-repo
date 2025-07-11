@@ -1,11 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+// [style.marginLeft]="sideNavCollapsed ? '50px' : '200px'" style="padding:2rem; transition: margin-left 0.2s;"
+.content-container {
+    margin-left: 200px;
+    padding: 2rem;
+    transition: margin-left 0.2s;
+    background-color: #f0f0f0;
+    max-height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    &.sideNavCollapsed {
+        margin-left: 50px;
+    }
+    &.mobile {
+        margin-left: 0;
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+}
+
 .page-container {
     background-color: #fcfcf7;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
     span {
         background: #fffff0;
         border: 2px solid #a8e46d;
@@ -14,5 +41,14 @@
         font-weight: 600;
         color: #333;
         font-size: 1.2em;
+    }
+}
+
+//// Responsive styles for mobile devices
+@media (max-width: 768px) {
+    .page-container {
+        width: 100%;
+        border-radius: 0;
+        padding: 16px;
     }
 }

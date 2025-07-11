@@ -3,7 +3,29 @@
         {{ collapsed ? '☰' : '✖' }}
     </button>
     <ul>
-        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a></li>
-        <li><a routerLink="/about" routerLinkActive="active">About Us</a></li>
+        <li>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                @if (collapsed) {
+                    <!-- Home SVG icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 12l9-9 9 9h-3v9h-12v-9h-3z"/></svg>
+                }@else {
+                    <!-- Home text -->
+                    <span>Home</span>
+                }
+                
+            </a>
+        </li>
+        <li>
+            <a routerLink="/about" routerLinkActive="active">
+
+                @if (collapsed) {
+                    <!-- About SVG icon -->
+                    <svg width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><rect x="8" y="14" width="8" height="6"/></svg>
+                }@else{
+                    <!-- About text -->
+                    <span>About Us</span>
+                }
+            </a>
+        </li>
     </ul>
 </nav>
